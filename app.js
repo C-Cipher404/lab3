@@ -6,6 +6,4 @@ const server = http.createServer((req, res) => {
   fs.createReadStream("data.txt").pipe(res);
 });
 
-server.listen(8080, () => {
-  console.log("Server is listening on port 8080");
-});
+server.listen(process.env.PORT || 8080);
